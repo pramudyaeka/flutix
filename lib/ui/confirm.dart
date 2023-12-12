@@ -1,3 +1,4 @@
+import 'package:flutix/ui/homepage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -124,8 +125,8 @@ class _ConfirmState extends State<Confirm> {
               ),
               GestureDetector(
                 onTap: () {
-                  // Navigator.of(context)
-                  //     .push(MaterialPageRoute(builder: (context) => uprof()));
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (context) => homepage()));
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 140, right: 20, top: 100, bottom: 40),
