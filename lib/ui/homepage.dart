@@ -14,8 +14,6 @@ class homepage extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage> {
-  int _currentIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     Future<List<Movie>> nowPlaying = Api.getMovies('now_playing', 4);
@@ -27,13 +25,11 @@ class _homepageState extends State<homepage> {
             height: 120,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
-            color: Color(0xFF2C1F62),
-            borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(20),
-              bottomRight: Radius.circular(20))
-            ),
+                color: Color(0xFF2C1F62),
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20))),
             child: Row(
-              
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(width: 20),
@@ -55,14 +51,16 @@ class _homepageState extends State<homepage> {
                     Text(
                       "Username",
                       style: GoogleFonts.raleway(
-                        color :Colors.white,
-                          fontSize: 16, fontWeight: FontWeight.bold),
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
                     ),
                     Text(
                       "Rp ,00",
                       style: GoogleFonts.openSans(
-                        color: Color(0xFFFBD460),
-                          fontSize: 14, fontWeight: FontWeight.w400),
+                          color: Color(0xFFFBD460),
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400),
                     ),
                   ],
                 )
@@ -170,40 +168,10 @@ class _homepageState extends State<homepage> {
             ]),
           ),
           Center(
-            child: Container(
-              width: 280,
-              height: 90,
-              color: Colors.grey
-            ),
+            child: Container(width: 280, height: 90, color: Colors.grey),
           )
         ]),
       ]),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.play_circle_fill_rounded),
-            label: 'Movies',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.discount_rounded),
-            label: 'My Tickets',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        selectedLabelStyle: TextStyle(color: Color.fromARGB(255, 111, 11, 225),),
-        unselectedLabelStyle: TextStyle(color: Colors.grey),
-        selectedIconTheme: IconThemeData(color:  Color.fromARGB(255, 111, 11, 225)),
-        unselectedIconTheme: IconThemeData(color: Colors.grey),
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-      ),
     );
   }
 }

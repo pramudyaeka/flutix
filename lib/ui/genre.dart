@@ -65,14 +65,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Horror",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -84,14 +84,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Music",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -103,18 +103,18 @@ class _flutixgenreState extends State<Genre> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 20, left: 20),
+                  padding: const EdgeInsets.only(top: 0, left: 20),
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Action",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -126,14 +126,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Drama",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -149,14 +149,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Adventure",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -168,14 +168,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Crime",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -211,14 +211,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Indonesia",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -230,14 +230,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "English",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -253,14 +253,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Korean",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
@@ -272,14 +272,14 @@ class _flutixgenreState extends State<Genre> {
                   child: Container(
                     width: 150,
                     height: 80,
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(5),
-                    color: Color.fromARGB(255, 197, 197, 197)
-                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        color: Color.fromARGB(255, 197, 197, 197)),
                     child: Center(
                       child: Text(
                         "Japanese",
                         style: GoogleFonts.raleway(
-                            color:Colors.black,
+                            color: Colors.black,
                             fontSize: 16,
                             fontWeight: FontWeight.normal),
                       ),
