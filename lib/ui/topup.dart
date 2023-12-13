@@ -7,10 +7,27 @@ class topup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
+      // theme: ThemeData.dark().copyWith(
+      //   scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+      // ),
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          leading: Padding(
+            padding: const EdgeInsets.only(top: 10.0, left: 20),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_rounded,
+                color: Color.fromARGB(255, 111, 11, 225),
+                size: 32,
+              ),
+            ),
+          ),
+        ),
         body: ListView(children: [
           TopUp(),
         ]),
@@ -104,133 +121,133 @@ class TopUp extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 17,
-                top: 43,
-                child: Container(
-                  width: 43,
-                  height: 39,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 11,
-                top: 9,
-                child: Container(
-                  width: 340,
-                  height: 17,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 17,
-                        top: 1,
-                        child: Opacity(
-                          opacity: 0.60,
-                          child: Text(
-                            '12:00',
-                            style: TextStyle(
-                              color: Color(0xFF1C1B14),
-                              fontSize: 14,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 7,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: Container(
-                            width: 4,
-                            height: 4,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF1C1B14),
-                              shape: OvalBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 332,
-                        top: 1,
-                        child: Container(
-                          width: 8,
-                          height: 13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/8x13"),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 11,
-                top: 9,
-                child: Container(
-                  width: 340,
-                  height: 17,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 17,
-                        top: 1,
-                        child: Opacity(
-                          opacity: 0.60,
-                          child: Text(
-                            '12:00',
-                            style: TextStyle(
-                              color: Color(0xFF1C1B14),
-                              fontSize: 14,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 7,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: Container(
-                            width: 4,
-                            height: 4,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF1C1B14),
-                              shape: OvalBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 332,
-                        top: 1,
-                        child: Container(
-                          width: 8,
-                          height: 13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/8x13"),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // Positioned(
+              //   left: 17,
+              //   top: 43,
+              //   child: Container(
+              //     width: 43,
+              //     height: 39,
+              //     child: Stack(children: []),
+              //   ),
+              // ),
+              // Positioned(
+              //   left: 11,
+              //   top: 9,
+              //   child: Container(
+              //     width: 340,
+              //     height: 17,
+              //     child: Stack(
+              //       children: [
+              //         Positioned(
+              //           left: 17,
+              //           top: 1,
+              //           child: Opacity(
+              //             opacity: 0.60,
+              //             child: Text(
+              //               '12:00',
+              //               style: TextStyle(
+              //                 color: Color(0xFF1C1B14),
+              //                 fontSize: 14,
+              //                 fontFamily: 'Roboto',
+              //                 fontWeight: FontWeight.w500,
+              //                 height: 0,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 0,
+              //           top: 7,
+              //           child: Opacity(
+              //             opacity: 0.50,
+              //             child: Container(
+              //               width: 4,
+              //               height: 4,
+              //               decoration: ShapeDecoration(
+              //                 color: Color(0xFF1C1B14),
+              //                 shape: OvalBorder(),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 332,
+              //           top: 1,
+              //           child: Container(
+              //             width: 8,
+              //             height: 13,
+              //             decoration: BoxDecoration(
+              //               image: DecorationImage(
+              //                 image: NetworkImage(
+              //                     "https://via.placeholder.com/8x13"),
+              //                 fit: BoxFit.fill,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
+              // Positioned(
+              //   left: 11,
+              //   top: 9,
+              //   child: Container(
+              //     width: 340,
+              //     height: 17,
+              //     child: Stack(
+              //       children: [
+              //         Positioned(
+              //           left: 17,
+              //           top: 1,
+              //           child: Opacity(
+              //             opacity: 0.60,
+              //             child: Text(
+              //               '12:00',
+              //               style: TextStyle(
+              //                 color: Color(0xFF1C1B14),
+              //                 fontSize: 14,
+              //                 fontFamily: 'Roboto',
+              //                 fontWeight: FontWeight.w500,
+              //                 height: 0,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 0,
+              //           top: 7,
+              //           child: Opacity(
+              //             opacity: 0.50,
+              //             child: Container(
+              //               width: 4,
+              //               height: 4,
+              //               decoration: ShapeDecoration(
+              //                 color: Color(0xFF1C1B14),
+              //                 shape: OvalBorder(),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 332,
+              //           top: 1,
+              //           child: Container(
+              //             width: 8,
+              //             height: 13,
+              //             decoration: BoxDecoration(
+              //               image: DecorationImage(
+              //                 image: NetworkImage(
+              //                     "https://via.placeholder.com/8x13"),
+              //                 fit: BoxFit.fill,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
               Positioned(
                 left: 78,
                 top: 551,
