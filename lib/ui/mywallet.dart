@@ -7,10 +7,24 @@ class mywallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
       home: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          leading: Padding(
+            padding: const EdgeInsets.only(top: 10.0, left: 20),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_rounded,
+                color: Color.fromARGB(255, 111, 11, 225),
+                size: 32,
+              ),
+            ),
+          ),
+        ),
         body: ListView(children: [
           MyWallet(),
         ]),
@@ -118,23 +132,6 @@ class MyWallet extends StatelessWidget {
                   height: 17,
                   child: Stack(
                     children: [
-                      Positioned(
-                        left: 17,
-                        top: 1,
-                        child: Opacity(
-                          opacity: 0.60,
-                          child: Text(
-                            '12:00',
-                            style: TextStyle(
-                              color: Color(0xFF1C1B14),
-                              fontSize: 14,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
                       Positioned(
                         left: 0,
                         top: 7,
