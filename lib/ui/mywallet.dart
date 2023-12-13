@@ -33,7 +33,6 @@ class mywallet extends StatelessWidget {
   }
 }
 
-
 class MyWallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -103,62 +102,11 @@ class MyWallet extends StatelessWidget {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 12,
                                 fontFamily: 'Raleway',
                                 fontWeight: FontWeight.w700,
                                 height: 0,
                               ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 17,
-                top: 43,
-                child: Container(
-                  width: 43,
-                  height: 39,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 11,
-                top: 9,
-                child: Container(
-                  width: 340,
-                  height: 17,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 7,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: Container(
-                            width: 4,
-                            height: 4,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF1C1B14),
-                              shape: OvalBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 332,
-                        top: 1,
-                        child: Container(
-                          width: 8,
-                          height: 13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/8x13"),
-                              fit: BoxFit.fill,
                             ),
                           ),
                         ),

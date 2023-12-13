@@ -1,3 +1,6 @@
+import 'package:flutix/ui/homepage.dart';
+import 'package:flutix/ui/mywallet.dart';
+import 'package:flutix/ui/profilepage.dart';
 import 'package:flutter/material.dart';
 
 class notiftopup extends StatelessWidget {
@@ -45,24 +48,35 @@ class SuccessTopup extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 114,
-                top: 501,
-                child: SizedBox(
-                  width: 133,
-                  height: 20,
-                  child: Text(
-                    'Back to Home',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontFamily: 'Raleway',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
+                  left: 120,
+                  top: 501,
+                  child: GestureDetector(
+                      onTap: () {
+                        // Navigasi ke halaman edit profil saat ditekan
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => profilpage(),
+                          ),
+                        );
+                      },
+                      child: Center(
+                        child: SizedBox(
+                          width: 130,
+                          height: 501,
+                          child: Text(
+                            'Back To Home',
+                            style: TextStyle(
+                              color: Color.fromARGB(94, 51, 27, 27),
+                              fontSize: 16,
+                              fontFamily: 'Raleway',
+                              fontWeight: FontWeight.w700,
+                              height: 0,
+                            ),
+                          ),
+                        ),
+                      ))),
+
               Positioned(
                 left: 107,
                 top: 450,
@@ -98,19 +112,34 @@ class SuccessTopup extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 33,
-                        top: 10,
-                        child: Text(
-                          'My Wallet',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Raleway',
-                            fontWeight: FontWeight.w700,
-                            height: 0,
-                          ),
-                        ),
-                      ),
+                          left: 0,
+                          top: 0,
+                          child: GestureDetector(
+                            onTap: () {
+                              // Navigasi ke halaman edit profil saat ditekan
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => mywallet(),
+                                ),
+                              );
+                            },
+                            child: SizedBox(
+                                width: 146,
+                                height: 40,
+                                child: Center(
+                                  child: Text(
+                                    'My Wallet',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 16,
+                                      fontFamily: 'Raleway',
+                                      fontWeight: FontWeight.w700,
+                                      height: 0,
+                                    ),
+                                  ),
+                                )),
+                          )),
                     ],
                   ),
                 ),
