@@ -193,7 +193,7 @@ class MyWallet extends StatelessWidget {
                 top: 116,
                 child: SizedBox(
                   width: 319,
-                  height: 22,
+                  height: 70,
                   child: Text(
                     'IDR. 390.000,00',
                     textAlign: TextAlign.center,

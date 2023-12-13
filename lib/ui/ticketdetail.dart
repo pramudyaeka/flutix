@@ -7,10 +7,24 @@ class ticketdetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
       home: Scaffold(
+        appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        leading: Padding(
+          padding: const EdgeInsets.only(top: 10.0, left: 20),
+          child: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_rounded,
+              color: Color.fromARGB(255, 111, 11, 225),
+              size: 32,
+            ),
+          ),
+        ),
+      ),
         body: ListView(children: [
           TicketDetails(),
         ]),
@@ -25,7 +39,7 @@ class TicketDetails extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 360,
+          width: MediaQuery.of(context).size.width,
           height: 700,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(color: Colors.white),
@@ -38,11 +52,7 @@ class TicketDetails extends StatelessWidget {
                   width: 360,
                   height: 185,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(1.00, -0.01),
-                      end: Alignment(-1, 0.01),
-                      colors: [Colors.white, Color(0xFF4A3979)],
-                    ),
+                    color: Colors.white
                   ),
                 ),
               ),
@@ -86,7 +96,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   'Date',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 24,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w700,
@@ -100,7 +110,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   'Seat',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 24,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w700,
@@ -209,7 +219,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   'XXI Big Mall Samarinda',
                   style: TextStyle(
-                    color: Color(0xFF4A3979),
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 15,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w400,
@@ -223,7 +233,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   '13, September 2023',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 15,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w400,
@@ -237,7 +247,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   'Pramudyae',
                   style: TextStyle(
-                    color: Color(0xFF4A3979),
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 15,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w400,
@@ -251,7 +261,7 @@ class TicketDetails extends StatelessWidget {
                 child: Text(
                   'A5,C12',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 102, 102, 102),
                     fontSize: 15,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w400,

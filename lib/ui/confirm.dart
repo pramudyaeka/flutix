@@ -1,4 +1,3 @@
-import 'package:flutix/ui/homepage.dart';
 import 'package:flutix/ui/navigationbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -101,7 +100,7 @@ class _ConfirmState extends State<Confirm> {
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Text(
-                    "NANTI ISINYA USERNAME",
+                    "USERNAME",
                     style: GoogleFonts.raleway(
                       fontSize: 20,
                       color: Colors.black,

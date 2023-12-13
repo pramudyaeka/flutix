@@ -1,9 +1,10 @@
-// import 'package:flutix/selectseat.dart';
+import 'package:flutix/ui/selectseat.dart';
 import 'package:flutix/models/models.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class selectplace extends StatefulWidget {
   Movie movie;
   selectplace({super.key, required this.movie});
@@ -227,21 +228,21 @@ class _selectplaceState extends State<selectplace> {
                     ),
                   ),
                 ),
-                // GestureDetector(
-                //   onTap: () {
-                //     Navigator.of(context).push(
-                //         MaterialPageRoute(builder: (context) => selectseat(movies: widget.movie,)));
-                //   },
-                //   child: Padding(
-                //     padding: const EdgeInsets.only(
-                //         left: 130, top: 40, bottom: 40, right: 10),
-                //     child: Icon(
-                //       Icons.arrow_circle_right_outlined,
-                //       color: Color.fromARGB(255, 111, 11, 225),
-                //       size: 40,
-                //     ),
-                //   ),
-                // ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => selectseat(movies: widget.movie,)));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 130, top: 40, bottom: 40, right: 10),
+                    child: Icon(
+                      Icons.arrow_circle_right_outlined,
+                      color: Color.fromARGB(255, 111, 11, 225),
+                      size: 40,
+                    ),
+                  ),
+                ),
               ],
             ),
           ],

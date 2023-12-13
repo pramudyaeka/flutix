@@ -1,5 +1,5 @@
 import 'package:flutix/models/models.dart';
-import 'package:flutix/ui/moviedetail.dart';
+// import 'package:flutix/ui/moviedetail.dart';
 import 'package:flutix/services/services.dart';
 import 'package:flutix/widgets/comingposters.dart';
 import 'package:flutix/widgets/posters.dart';

@@ -1,7 +1,7 @@
 // moviecomingposter.dart
 // ignore_for_file: must_be_immutable
 
-import 'package:flutix/ui/moviedetail.dart';
+// import 'package:flutix/ui/moviedetail.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutix/models/models.dart';
