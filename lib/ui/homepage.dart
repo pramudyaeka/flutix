@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-
 class homepage extends StatefulWidget {
   const homepage({super.key});
 
@@ -24,16 +23,16 @@ class _homepageState extends State<homepage> {
     Future<List<Movie>> comingSoon = Api.getMovies('upcoming', 4);
 
     final List<String> imgList = [
-    "https://foto.kontan.co.id/_ziwi2qFjCBIXDAlJf7D1QB8jmk=/smart/filters:format(webp)/2022/05/20/1845567649p.jpg", // Ganti URL dengan URL gambar pertama
-    "https://foto.kontan.co.id/w637HNzHuAnuDoWG6emeTAjh4_s=/smart/filters:format(webp)/2022/12/23/588914752p.jpg", // Ganti URL dengan URL gambar kedua
-  ];
+      "https://foto.kontan.co.id/_ziwi2qFjCBIXDAlJf7D1QB8jmk=/smart/filters:format(webp)/2022/05/20/1845567649p.jpg", // Ganti URL dengan URL gambar pertama
+      "https://foto.kontan.co.id/w637HNzHuAnuDoWG6emeTAjh4_s=/smart/filters:format(webp)/2022/12/23/588914752p.jpg", // Ganti URL dengan URL gambar kedua
+    ];
     return Scaffold(
       body: ListView(children: [
         Column(children: [
           Container(
             height: 120,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Color(0xFF2C1F62),
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20),
@@ -41,11 +40,11 @@ class _homepageState extends State<homepage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(width: 20),
+                const SizedBox(width: 20),
                 Container(
                   width: 70,
                   height: 70,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.black,
                   ),
@@ -56,7 +55,7 @@ class _homepageState extends State<homepage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 40),
+                    const SizedBox(height: 40),
                     Text(
                       "Hudzaifah A",
                       style: GoogleFonts.raleway(
@@ -67,7 +66,7 @@ class _homepageState extends State<homepage> {
                     Text(
                       "Rp 900,00",
                       style: GoogleFonts.openSans(
-                          color: Color(0xFFFBD460),
+                          color: const Color(0xFFFBD460),
                           fontSize: 14,
                           fontWeight: FontWeight.w400),
                     ),
@@ -76,7 +75,7 @@ class _homepageState extends State<homepage> {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child:
@@ -114,13 +113,14 @@ class _homepageState extends State<homepage> {
                       return const Text("there is no data");
                     }
                   }),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 "Movie Category",
                 style: GoogleFonts.raleway(
                     fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Container(
+<<<<<<< HEAD
                 child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -168,8 +168,35 @@ class _homepageState extends State<homepage> {
             ],
           ),
         ),
+=======
+                child: const Center(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        FontAwesomeIcons.ghost,
+                        size: 30, // Sesuaikan ukuran ikon
+                        color: Colors.black, // Sesuaikan warna ikon
+                      ),
+                      SizedBox(width: 20), // Jarak antara ikon
+                      Icon(
+                        FontAwesomeIcons.ghost,
+                        size: 30,
+                        color: Colors.black,
+                      ),
+                      SizedBox(width: 20),
+                      Icon(
+                        FontAwesomeIcons.ghost,
+                        size: 30,
+                        color: Colors.black,
+                      ),
+                      // Tambahkan Icon lainnya sesuai kebutuhan
+                    ],
+                  ),
+                ),
+>>>>>>> 8b1e8e983b8cd2b2a6b4e3a40c17b34bb78f9e16
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 "Coming Soon",
                 style: GoogleFonts.raleway(
@@ -202,28 +229,28 @@ class _homepageState extends State<homepage> {
                   }
                 },
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ]),
           ),
           Center(
             child: CarouselSlider(
-            options: CarouselOptions(
-              autoPlay: true,
-              aspectRatio: 2.0,
-              enlargeCenterPage: true,
+              options: CarouselOptions(
+                autoPlay: true,
+                aspectRatio: 2.0,
+                enlargeCenterPage: true,
+              ),
+              items: imgList.map((url) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return Image.network(
+                      url,
+                      fit: BoxFit.cover,
+                    );
+                  },
+                );
+              }).toList(),
             ),
-            items: imgList.map((url) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Image.network(
-                    url,
-                    fit: BoxFit.cover,
-                  );
-                },
-              );
-            }).toList(),
           ),
-        ),
         ]),
       ]),
     );
