@@ -57,14 +57,14 @@ class _homepageState extends State<homepage> {
                   children: [
                     const SizedBox(height: 40),
                     Text(
-                      "Username",
+                      "Hudzaifah A",
                       style: GoogleFonts.raleway(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Rp ,00",
+                      "Rp 900,00",
                       style: GoogleFonts.openSans(
                           color: const Color(0xFFFBD460),
                           fontSize: 14,
@@ -120,6 +120,55 @@ class _homepageState extends State<homepage> {
                     fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Container(
+<<<<<<< HEAD
+                child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Horor",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Komedi",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Dokumenter",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
+=======
                 child: const Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -145,6 +194,7 @@ class _homepageState extends State<homepage> {
                     ],
                   ),
                 ),
+>>>>>>> 8b1e8e983b8cd2b2a6b4e3a40c17b34bb78f9e16
               ),
               const SizedBox(height: 10),
               Text(
