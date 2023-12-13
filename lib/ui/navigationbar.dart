@@ -15,11 +15,11 @@ class _HomePageUserState extends State<HomePageUser> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: Text('User Home Page'),
-        backgroundColor: Colors.white,
-      ),
+      // appBar: AppBar(
+      //   automaticallyImplyLeading: false,
+      //   title: Text('User Home Page'),
+      //   backgroundColor: Colors.white,
+      // ),
       body: _children[_currentIndex],
       bottomNavigationBar: buildBottomNavigationBar(),
     );
@@ -46,7 +46,7 @@ class _HomePageUserState extends State<HomePageUser> {
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.receipt),
-          label: 'Liked',
+          label: 'Tickets',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
