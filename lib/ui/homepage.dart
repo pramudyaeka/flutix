@@ -1,3 +1,5 @@
+import 'package:carousel_slider/carousel_options.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutix/models/models.dart';
 // import 'package:flutix/ui/moviedetail.dart';
 import 'package:flutix/services/services.dart';
@@ -5,6 +7,8 @@ import 'package:flutix/widgets/comingposters.dart';
 import 'package:flutix/widgets/posters.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -18,6 +22,11 @@ class _homepageState extends State<homepage> {
   Widget build(BuildContext context) {
     Future<List<Movie>> nowPlaying = Api.getMovies('now_playing', 4);
     Future<List<Movie>> comingSoon = Api.getMovies('upcoming', 4);
+
+    final List<String> imgList = [
+    "https://foto.kontan.co.id/_ziwi2qFjCBIXDAlJf7D1QB8jmk=/smart/filters:format(webp)/2022/05/20/1845567649p.jpg", // Ganti URL dengan URL gambar pertama
+    "https://foto.kontan.co.id/w637HNzHuAnuDoWG6emeTAjh4_s=/smart/filters:format(webp)/2022/12/23/588914752p.jpg", // Ganti URL dengan URL gambar kedua
+  ];
     return Scaffold(
       body: ListView(children: [
         Column(children: [
@@ -112,24 +121,17 @@ class _homepageState extends State<homepage> {
                     fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Container(
-                height: 70.0,
                 child: Center(
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: 4,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        width: 65,
-                        margin:
-                            EdgeInsets.only(left: 15.0, top: 8.0, right: 3.0),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.grey,
-                        ),
-                      );
-                    },
-                  ),
-                ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(FontAwesomeIcons.ghost),
+              Icon(FontAwesomeIcons.ghost),
+              Icon(FontAwesomeIcons.ghost),
+              // Tambahkan Icon lainnya sesuai kebutuhan
+            ],
+          ),
+        ),
               ),
               SizedBox(height: 10),
               Text(
@@ -168,8 +170,24 @@ class _homepageState extends State<homepage> {
             ]),
           ),
           Center(
-            child: Container(width: 280, height: 90, color: Colors.grey),
-          )
+            child: CarouselSlider(
+            options: CarouselOptions(
+              autoPlay: true,
+              aspectRatio: 2.0,
+              enlargeCenterPage: true,
+            ),
+            items: imgList.map((url) {
+              return Builder(
+                builder: (BuildContext context) {
+                  return Image.network(
+                    url,
+                    fit: BoxFit.cover,
+                  );
+                },
+              );
+            }).toList(),
+          ),
+        ),
         ]),
       ]),
     );
