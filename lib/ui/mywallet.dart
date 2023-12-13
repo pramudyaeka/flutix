@@ -7,9 +7,9 @@ class mywallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
+      // theme: ThemeData.dark().copyWith(
+      //   scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+      // ),
       home: Scaffold(
         body: ListView(children: [
           MyWallet(),
@@ -18,6 +18,7 @@ class mywallet extends StatelessWidget {
     );
   }
 }
+
 
 class MyWallet extends StatelessWidget {
   @override
