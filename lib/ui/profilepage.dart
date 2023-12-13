@@ -213,7 +213,7 @@ class Profile extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => editprofil(),
+                          builder: (context) => EditProfile(),
                         ),
                       );
                     },
