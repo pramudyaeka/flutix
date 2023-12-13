@@ -58,14 +58,14 @@ class _homepageState extends State<homepage> {
                   children: [
                     SizedBox(height: 40),
                     Text(
-                      "Username",
+                      "Hudzaifah A",
                       style: GoogleFonts.raleway(
                           color: Colors.white,
                           fontSize: 16,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(
-                      "Rp ,00",
+                      "Rp 900,00",
                       style: GoogleFonts.openSans(
                           color: Color(0xFFFBD460),
                           fontSize: 14,
@@ -123,12 +123,48 @@ class _homepageState extends State<homepage> {
               Container(
                 child: Center(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Icon(FontAwesomeIcons.ghost),
-              Icon(FontAwesomeIcons.ghost),
-              Icon(FontAwesomeIcons.ghost),
-              // Tambahkan Icon lainnya sesuai kebutuhan
+              Container(
+                
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Horor",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Komedi",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                decoration: BoxDecoration(
+                  color: Color(0xFF2C1F62),
+                  border: Border.all(color: Colors.black),
+                  borderRadius: BorderRadius.circular(8.0),
+                ),
+                child: Text(
+                  "Dokumenter",
+                  style: TextStyle(fontSize: 16.0,
+                  color: Colors.white),
+                ),
+              ),
             ],
           ),
         ),
