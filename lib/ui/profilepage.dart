@@ -8,7 +8,6 @@ class profilpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       home: Scaffold(
         body: ListView(children: [
           Profile(),
@@ -30,15 +29,15 @@ class Profile extends StatelessWidget {
           decoration: BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
-              Positioned(
-                left: 0,
-                top: 305,
-                child: Container(
-                  width: 360,
-                  height: 351,
-                  decoration: BoxDecoration(color: Color(0xFF4A3979)),
-                ),
-              ),
+              // Positioned(
+              //   left: 0,
+              //   top: 305,
+              //   child: Container(
+              //     width: 360,
+              //     height: 351,
+              //     decoration: BoxDecoration(color: Color(0xFF4A3979)),
+              //   ),
+              // ),
               Positioned(
                 left: 0,
                 top: 50,
@@ -369,72 +368,72 @@ class Profile extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 53,
-                top: 397,
-                child: Container(
-                  height: 16.16,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 52,
-                top: 521,
-                child: Container(
-                  width: 21.98,
-                  height: 21.98,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 11,
-                top: 10,
-                child: Container(
-                  width: 340,
-                  height: 17,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 17,
-                        top: 1,
-                        child: Opacity(
-                          opacity: 0.60,
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 7,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: Container(
-                            width: 4,
-                            height: 4,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF1C1B14),
-                              shape: OvalBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 332,
-                        top: 1,
-                        child: Container(
-                          width: 8,
-                          height: 13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/8x13"),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              // Positioned(
+              //   left: 53,
+              //   top: 397,
+              //   child: Container(
+              //     height: 16.16,
+              //     child: Stack(children: []),
+              //   ),
+              // ),
+              // Positioned(
+              //   left: 52,
+              //   top: 521,
+              //   child: Container(
+              //     width: 21.98,
+              //     height: 21.98,
+              //     child: Stack(children: []),
+              //   ),
+              // ),
+              // Positioned(
+              //   left: 11,
+              //   top: 10,
+              //   child: Container(
+              //     width: 340,
+              //     height: 17,
+              //     child: Stack(
+              //       children: [
+              //         Positioned(
+              //           left: 17,
+              //           top: 1,
+              //           child: Opacity(
+              //             opacity: 0.60,
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 0,
+              //           top: 7,
+              //           child: Opacity(
+              //             opacity: 0.50,
+              //             child: Container(
+              //               width: 4,
+              //               height: 4,
+              //               decoration: ShapeDecoration(
+              //                 color: Color(0xFF1C1B14),
+              //                 shape: OvalBorder(),
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //         Positioned(
+              //           left: 332,
+              //           top: 1,
+              //           child: Container(
+              //             width: 8,
+              //             height: 13,
+              //             decoration: BoxDecoration(
+              //               image: DecorationImage(
+              //                 image: NetworkImage(
+              //                     "https://via.placeholder.com/8x13"),
+              //                 fit: BoxFit.fill,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
