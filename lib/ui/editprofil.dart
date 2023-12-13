@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
-
-class editprofil extends StatelessWidget {
-  const editprofil({super.key});
+import 'package:google_fonts/google_fonts.dart';
+class EditProfile extends StatefulWidget {
+  const EditProfile({super.key});
 
   @override
+  State<EditProfile> createState() => _EditProfileState();
+}
+
+  final TextEditingController _ctrlNama = TextEditingController();
+  final TextEditingController _ctrlEmail = TextEditingController();
+  final TextEditingController _ctrlPassword = TextEditingController();
+  final TextEditingController _ctrlConfirmPassword = TextEditingController();
+
+class _EditProfileState extends State<EditProfile> {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: Padding(
@@ -24,422 +33,192 @@ class editprofil extends StatelessWidget {
           ),
         ),
       ),
-        body: ListView(children: [
-          EditProfile(),
-        ]),
-      ),
-    );
-  }
-}
-
-class EditProfile extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 360,
-          height: 640,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
-          child: Stack(
+      body: ListView(
+        children: [
+          Column(
             children: [
-              Positioned(
-                left: 18,
-                top: 441,
-                child: Container(
-                  width: 312,
-                  height: 73,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 23,
-                        child: Container(
-                          width: 312,
-                          height: 50,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  width: 1, color: Color(0xFF7E7E7E)),
-                              borderRadius: BorderRadius.circular(7),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 11,
-                        top: 0,
-                        child: Container(
-                          width: 72,
-                          height: 32,
-                          decoration: BoxDecoration(color: Colors.white),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 23,
-                        child: SizedBox(
-                          width: 85,
-                          height: 36,
-                          child: Text(
-                            '. . . . .',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 36,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w700,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 6,
-                        child: SizedBox(
-                          width: 140,
-                          height: 19,
-                          child: Text(
-                            'Confirm Password',
-                            style: TextStyle(
-                              color: Color(0xFF7E7E7E),
-                              fontSize: 14,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+              Text('Edit Your \nProfile',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.raleway(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: Colors.black
               ),
-              Positioned(
-                left: 18,
-                top: 361,
-                child: Container(
-                  width: 312,
-                  height: 73,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 23,
-                        child: Container(
-                          width: 312,
-                          height: 50,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  width: 1, color: Color(0xFF7E7E7E)),
-                              borderRadius: BorderRadius.circular(7),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 11,
-                        top: 0,
-                        child: Container(
-                          width: 103,
-                          height: 32,
-                          decoration: BoxDecoration(color: Colors.white),
-                        ),
-                      ),
-                      Positioned(
-                        left: 11,
-                        top: 37,
-                        child: SizedBox(
-                          width: 181,
-                          height: 25,
-                          child: Text(
-                            'pramudyae |',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 6,
-                        child: SizedBox(
-                          width: 140,
-                          height: 19,
-                          child: Text(
-                            'Password',
-                            style: TextStyle(
-                              color: Color(0xFF7E7E7E),
-                              fontSize: 14,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
               ),
-              Positioned(
-                left: 18,
-                top: 283,
-                child: Container(
-                  width: 312,
-                  height: 73,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 23,
-                        child: Container(
-                          width: 312,
-                          height: 50,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  width: 1, color: Color(0xFF7E7E7E)),
-                              borderRadius: BorderRadius.circular(7),
-                            ),
-                          ),
+              Stack(
+                  children: [
+                    Center(
+                      child: Icon(
+                        Icons.person_4_rounded,
+                        color: Color.fromARGB(255, 247, 234, 60),
+                        size: 100,
+                      ),
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            left: 20, top: 70.0, right: 20),
+                        child: Icon(
+                          Icons.add_circle,
+                          color: Color.fromARGB(255, 111, 11, 225),
+                          size: 40,
                         ),
                       ),
-                      Positioned(
-                        left: 11,
-                        top: 0,
-                        child: Container(
-                          width: 72,
-                          height: 32,
-                          decoration: BoxDecoration(color: Colors.white),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 35,
-                        child: SizedBox(
-                          width: 86,
-                          height: 25,
-                          child: Text(
-                            'P',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 14,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 6,
-                        child: SizedBox(
-                          width: 140,
-                          height: 19,
-                          child: Text(
-                            'Email Address',
-                            style: TextStyle(
-                              color: Color(0x557E7E7E),
-                              fontSize: 14,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ),
-              Positioned(
-                left: 18,
-                top: 201,
-                child: Container(
-                  width: 312,
-                  height: 73,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 23,
-                        child: Container(
-                          width: 312,
-                          height: 50,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                  width: 1, color: Color(0xFF7E7E7E)),
-                              borderRadius: BorderRadius.circular(7),
-                            ),
-                          ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, left: 20, right: 20),
+                  child: TextFormField(
+                    controller: _ctrlNama,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Insert your full name';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(borderSide: BorderSide()),
+                      labelText: "Full Name",
+                      labelStyle: GoogleFonts.raleway(color: Colors.black),
+                      hintText: "Your Full Name...",
+                      hintStyle: GoogleFonts.raleway(color: Colors.black),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 3,
                         ),
                       ),
-                      Positioned(
-                        left: 11,
-                        top: 0,
-                        child: Container(
-                          width: 103,
-                          height: 32,
-                          decoration: BoxDecoration(color: Colors.white),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 247, 234, 60),
+                          width: 3,
                         ),
                       ),
-                      Positioned(
-                        left: 11,
-                        top: 37,
-                        child: SizedBox(
-                          width: 181,
-                          height: 25,
-                          child: Text(
-                            'pramudyae |',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 17,
-                        top: 6,
-                        child: SizedBox(
-                          width: 140,
-                          height: 19,
-                          child: Text(
-                            'Full Name',
-                            style: TextStyle(
-                              color: Color(0xFF7E7E7E),
-                              fontSize: 14,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w400,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 120,
-                top: 63,
-                child: SizedBox(
-                  width: 119,
-                  height: 60,
-                  child: Text(
-                    'Edit Profile',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontFamily: 'Raleway',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 135,
-                top: 104,
-                child: Container(
-                  width: 90,
-                  height: 90,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: OvalBorder(),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 142,
-                top: 102,
-                child: Container(
-                  width: 76.80,
-                  height: 76.80,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 168,
-                top: 180,
-                child: Container(
-                  width: 26,
-                  height: 26,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF97397D),
-                    shape: OvalBorder(),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 171,
-                top: 184,
-                child: Container(
-                  width: 20,
-                  height: 19,
-                  child: Stack(children: []),
-                ),
-              ),
-              Positioned(
-                left: 78,
-                top: 551,
-                child: Container(
-                  width: 197,
-                  height: 59.30,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 197,
-                          height: 59.30,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFF4A3979),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(7)),
-                          ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                  child: TextFormField(
+                    controller: _ctrlEmail,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Insert your email address';
+                      }
+                      return null;
+                    },
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(borderSide: BorderSide()),
+                      labelText: "Email Address",
+                      labelStyle: GoogleFonts.raleway(color: Colors.black),
+                      hintText: "Your Email Address...",
+                      hintStyle: GoogleFonts.raleway(color: Colors.black),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 3,
                         ),
                       ),
-                      Positioned(
-                        left: 42,
-                        top: 22,
-                        child: SizedBox(
-                          width: 133,
-                          height: 16,
-                          child: Text(
-                            'Update Profile',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.w700,
-                              height: 0,
-                            ),
-                          ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 247, 234, 60),
+                          width: 3,
                         ),
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                  child: TextFormField(
+                    controller: _ctrlPassword,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Insert your password';
+                      }
+                      return null;
+                    },
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(borderSide: BorderSide()),
+                      labelText: "Password",
+                      labelStyle: GoogleFonts.raleway(color: Colors.black),
+                      hintText: "***********",
+                      hintStyle: GoogleFonts.raleway(color: Colors.black),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 3,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 247, 234, 60),
+                          width: 3,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                  child: TextFormField(
+                    controller: _ctrlConfirmPassword,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Insert your confirm password';
+                      }
+                      return null;
+                    },
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(borderSide: BorderSide()),
+                      labelText: "Confirm Password",
+                      labelStyle: GoogleFonts.raleway(color: Colors.black),
+                      hintText: "***********",
+                      hintStyle: GoogleFonts.raleway(color: Colors.black),
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.grey,
+                          width: 3,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Color.fromARGB(255, 247, 234, 60),
+                          width: 3,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xFF3D9D9D),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7.0),
+                    ),
+                    minimumSize: Size(250, 50),
+                  ),
+                  child: Text(
+                    "Update My Profile",
+                    style: GoogleFonts.raleway(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+
             ],
-          ),
-        ),
-      ],
+          )
+          ],
+      ),
     );
   }
 }
