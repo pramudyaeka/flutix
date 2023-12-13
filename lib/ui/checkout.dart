@@ -1,4 +1,5 @@
 import 'package:flutix/models/models.dart';
+import 'package:flutix/ui/successCheckout.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +15,6 @@ class Checkout extends StatefulWidget {
 class _checkoutScreen1State extends State<Checkout> {
   @override
   Widget build(BuildContext context) {
-    
     double rating = widget.movies.rate / 2;
     int fullStars = rating.floor();
     bool hasHalfStar = (rating - fullStars) > 0;
@@ -369,7 +369,10 @@ class _checkoutScreen1State extends State<Checkout> {
                       ),
                       const SizedBox(width: 68),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SuccessCheckout()));
+                          },
                           icon: const Icon(
                             Icons.arrow_circle_right_outlined,
                             size: 70,
