@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutix/ui/genre.dart';
+import 'package:flutix/ui/signin.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -11,6 +13,7 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   bool _loading = false;
 
   final TextEditingController _ctrlNama = TextEditingController();
@@ -23,16 +26,30 @@ class _SignUpState extends State<SignUp> {
       final nama = _ctrlNama.value.text;
       final email = _ctrlEmail.value.text;
       final password = _ctrlPassword.value.text;
-
+      UserCredential userCredential = await _auth
+          .createUserWithEmailAndPassword(email: email, password: password);
       setState(() => _loading = true);
 
       try {
-        // // Registrasi pengguna
-        // await Auth().regis(email, password, nama);
-
-        // Navigator.of(context).push(
-        //   MaterialPageRoute(builder: (context) => confir()),
-        // );
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: Text("Registration Successful"),
+              content: Text("Your account has been successfully created."),
+              actions: <Widget>[
+                TextButton(
+                  child: Text("OK"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                    // Navigate back to the login page
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          },
+        );
       } catch (error) {
         // Tangani kesalahan yang mungkin terjadi saat registrasi
         print('Error during registration: $error');
@@ -261,8 +278,9 @@ class _SignUpState extends State<SignUp> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => Genre()));
+                        handleSubmit();
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => Genre()));
                       },
                       child: _loading
                           ? SizedBox(

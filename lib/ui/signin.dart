@@ -1,3 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutix/ui/genre.dart';
+import 'package:flutix/ui/homepage.dart';
+import 'package:flutix/ui/navigationbar.dart';
 import 'package:flutix/ui/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -11,6 +15,7 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   bool _loading = false;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -22,13 +27,14 @@ class _SignInState extends State<SignIn> {
       final email = _ctrlEmail.value.text;
       final password = _ctrlPassword.value.text;
 
-      setState(() => _loading = true);
-
       try {
-        // await Auth().login(email, password);
-        // Navigator.of(context).push(
-        //   MaterialPageRoute(builder: (context) => BottomNav()),
-        // );
+        UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+            email: email, password: password);
+        print("User Logged In: ${userCredential.user!.email}");
+        setState(() => _loading = true);
+        MaterialPageRoute(
+          builder: (context) => HomePageUser(),
+        );
       } catch (error) {
         print('Error during login: $error');
 
@@ -171,7 +177,11 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
               GestureDetector(
-                onTap: () => handleSubmit(),
+                onTap: () {
+                        handleSubmit();
+                        Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => homepage()));
+                      },
                 child: _loading
                     ? const SizedBox(
                         width: 20,
@@ -182,8 +192,8 @@ class _SignInState extends State<SignIn> {
                         ),
                       )
                     : Padding(
-                        padding: const EdgeInsets.only(
-                            left: 95, top: 80, right: 20),
+                        padding:
+                            const EdgeInsets.only(left: 95, top: 80, right: 20),
                         child: Icon(
                           Icons.arrow_circle_right_outlined,
                           color: Color.fromARGB(255, 111, 11, 225),
