@@ -9,22 +9,22 @@ class ticketdetail extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        leading: Padding(
-          padding: const EdgeInsets.only(top: 10.0, left: 20),
-          child: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Icon(
-              Icons.arrow_back_rounded,
-              color: Color.fromARGB(255, 111, 11, 225),
-              size: 32,
+          elevation: 0,
+          backgroundColor: Colors.transparent,
+          leading: Padding(
+            padding: const EdgeInsets.only(top: 10.0, left: 20),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_rounded,
+                color: Color.fromARGB(255, 111, 11, 225),
+                size: 32,
+              ),
             ),
           ),
         ),
-      ),
         body: ListView(children: [
           TicketDetails(),
         ]),
@@ -51,9 +51,7 @@ class TicketDetails extends StatelessWidget {
                 child: Container(
                   width: 360,
                   height: 185,
-                  decoration: BoxDecoration(
-                    color: Colors.white
-                  ),
+                  decoration: BoxDecoration(color: Colors.white),
                 ),
               ),
               Positioned(
@@ -97,7 +95,7 @@ class TicketDetails extends StatelessWidget {
                   'Date',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 24,
+                    fontSize: 20,
                     fontFamily: 'Raleway',
                     fontWeight: FontWeight.w700,
                     height: 0,
@@ -111,23 +109,9 @@ class TicketDetails extends StatelessWidget {
                   'Seat',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 24,
-                    fontFamily: 'Raleway',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 22,
-                top: 481,
-                child: Text(
-                  'Name',
-                  style: TextStyle(
-                    color: Colors.black,
                     fontSize: 20,
                     fontFamily: 'Raleway',
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     height: 0,
                   ),
                 ),
@@ -143,7 +127,7 @@ class TicketDetails extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 20,
                       fontFamily: 'Raleway',
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       height: 0,
                     ),
                   ),
@@ -161,7 +145,7 @@ class TicketDetails extends StatelessWidget {
                       color: Colors.black,
                       fontSize: 20,
                       fontFamily: 'Raleway',
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       height: 0,
                     ),
                   ),
@@ -176,7 +160,7 @@ class TicketDetails extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 20,
                     fontFamily: 'Raleway',
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     height: 0,
                   ),
                 ),
@@ -191,7 +175,7 @@ class TicketDetails extends StatelessWidget {
                     'Cinema',
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 24,
+                      fontSize: 20,
                       fontFamily: 'Raleway',
                       fontWeight: FontWeight.w700,
                       height: 0,
@@ -427,65 +411,6 @@ class TicketDetails extends StatelessWidget {
                           NetworkImage("https://via.placeholder.com/360x178"),
                       fit: BoxFit.fill,
                     ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 10,
-                top: 10,
-                child: Container(
-                  width: 340,
-                  height: 17,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 17,
-                        top: 1,
-                        child: Opacity(
-                          opacity: 0.60,
-                          child: Text(
-                            '12:00',
-                            style: TextStyle(
-                              color: Color(0xFF1C1B14),
-                              fontSize: 14,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 7,
-                        child: Opacity(
-                          opacity: 0.50,
-                          child: Container(
-                            width: 4,
-                            height: 4,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFF1C1B14),
-                              shape: OvalBorder(),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 332,
-                        top: 1,
-                        child: Container(
-                          width: 8,
-                          height: 13,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://via.placeholder.com/8x13"),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),
