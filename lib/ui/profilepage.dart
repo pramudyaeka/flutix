@@ -92,21 +92,36 @@ class Profile extends StatelessWidget {
                   height: 32,
                   decoration: ShapeDecoration(
                     color: Color(0xFF4A3979),
-                    shape: OvalBorder(),
+                    shape: CircleBorder(),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.edit,
+                      color: Colors.white,
+                      size: 16,
+                    ),
                   ),
                 ),
               ),
+
               Positioned(
                 left: 46,
                 top: 379,
                 child: Container(
-                  width: 32,
-                  height: 32,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF4A3979),
-                    shape: OvalBorder(),
-                  ),
-                ),
+                    width: 32,
+                    height: 32,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFF4A3979),
+                      shape: OvalBorder(),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons
+                            .account_balance_wallet, // Mengganti dengan ikon dompet
+                        color: Colors.white,
+                        size: 16,
+                      ),
+                    )),
               ),
               Positioned(
                 left: 46,
@@ -118,31 +133,52 @@ class Profile extends StatelessWidget {
                     color: Color(0xFF4A3979),
                     shape: OvalBorder(),
                   ),
+                  child: Center(
+                    child: Icon(
+                      Icons.settings, // Mengganti dengan ikon settings
+                      color: Colors.white,
+                      size: 16,
+                    ),
+                  ),
                 ),
               ),
               Positioned(
                 left: 47,
                 top: 506,
                 child: Container(
-                  width: 32,
-                  height: 32,
-                  decoration: const ShapeDecoration(
-                    color: Color(0xFF4A3979),
-                    shape: OvalBorder(),
-                  ),
-                ),
+                    width: 32,
+                    height: 32,
+                    decoration: const ShapeDecoration(
+                      color: Color(0xFF4A3979),
+                      shape: OvalBorder(),
+                    ),
+                    child: Center(
+                      child: Text(
+                        '?', // Karakter Unicode tanda tanya
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    )),
               ),
               Positioned(
                 left: 47,
                 top: 567,
                 child: Container(
-                  width: 32,
-                  height: 32,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFF4A3979),
-                    shape: OvalBorder(),
-                  ),
-                ),
+                    width: 32,
+                    height: 32,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFF4A3979),
+                      shape: OvalBorder(),
+                    ),
+                    child: Center(
+                      child: Icon(
+                        Icons.star,
+                        color: Colors.white,
+                        size: 16,
+                      ),
+                    )),
               ),
               Positioned(
                 left: 157,
@@ -366,16 +402,6 @@ class Profile extends StatelessWidget {
                         top: 1,
                         child: Opacity(
                           opacity: 0.60,
-                          child: Text(
-                            '12:00',
-                            style: TextStyle(
-                              color: Color(0xFF1C1B14),
-                              fontSize: 14,
-                              fontFamily: 'Roboto',
-                              fontWeight: FontWeight.w500,
-                              height: 0,
-                            ),
-                          ),
                         ),
                       ),
                       Positioned(
