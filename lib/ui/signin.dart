@@ -32,9 +32,12 @@ class _SignInState extends State<SignIn> {
             email: email, password: password);
         print("User Logged In: ${userCredential.user!.email}");
         setState(() => _loading = true);
+        Navigator.push(
+        context,
         MaterialPageRoute(
           builder: (context) => HomePageUser(),
-        );
+        ),
+      );
       } catch (error) {
         print('Error during login: $error');
 
@@ -178,10 +181,8 @@ class _SignInState extends State<SignIn> {
               ),
               GestureDetector(
                 onTap: () {
-                        handleSubmit();
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => homepage()));
-                      },
+                  handleSubmit();
+                },
                 child: _loading
                     ? const SizedBox(
                         width: 20,

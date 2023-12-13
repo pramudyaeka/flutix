@@ -41,9 +41,8 @@ class _SignUpState extends State<SignUp> {
                 TextButton(
                   child: Text("OK"),
                   onPressed: () {
-                    Navigator.of(context).pop();
-                    // Navigate back to the login page
-                    Navigator.of(context).pop();
+                    Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (context) => Genre()));
                   },
                 ),
               ],
@@ -279,8 +278,6 @@ class _SignUpState extends State<SignUp> {
                     GestureDetector(
                       onTap: () {
                         handleSubmit();
-                        Navigator.of(context).push(
-                            MaterialPageRoute(builder: (context) => Genre()));
                       },
                       child: _loading
                           ? SizedBox(
