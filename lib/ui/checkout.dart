@@ -68,12 +68,12 @@ class _checkoutScreen1State extends State<Checkout> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 10, width: 5),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: 150,
+                      width: 125,
                       height: 200,
                       decoration: BoxDecoration(
                         color: Colors.black,
@@ -87,7 +87,7 @@ class _checkoutScreen1State extends State<Checkout> {
                       ),
                     ),
                     Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -168,7 +168,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 132),
+                      const SizedBox(width: 110),
                       Text(
                         '32452009302031',
                         style: GoogleFonts.raleway(
@@ -216,7 +216,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 94),
+                      const SizedBox(width: 80),
                       Text(
                         'Monday 18, 22.00',
                         style: GoogleFonts.raleway(
@@ -240,7 +240,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 277),
+                      const SizedBox(width: 250),
                       Text(
                         'A1, A2',
                         style: GoogleFonts.raleway(
@@ -264,7 +264,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 164),
+                      const SizedBox(width: 145),
                       Text(
                         'Rp. 50.000 x 2',
                         style: GoogleFonts.raleway(
@@ -288,7 +288,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 239),
+                      const SizedBox(width: 215),
                       Text(
                         'Rp. 50.000',
                         style: GoogleFonts.raleway(
@@ -312,7 +312,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 229),
+                      const SizedBox(width: 207),
                       Text(
                         'Rp. 120.000',
                         style: GoogleFonts.raleway(
@@ -367,7 +367,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const SizedBox(width: 68),
+                      const SizedBox(width: 60),
                       IconButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(

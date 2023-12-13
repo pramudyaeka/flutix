@@ -23,7 +23,6 @@ class _selectplaceState extends State<selectplace> {
   List<String> jam = [
     '11.30',
     '14.45',
-    '17.00',
     '19.30',
     '22:00',
   ];
@@ -83,7 +82,7 @@ class _selectplaceState extends State<selectplace> {
               ),
             ),
             Container(
-              height: 70.0,
+              height: 80.0,
               child: Center(
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
@@ -103,9 +102,11 @@ class _selectplaceState extends State<selectplace> {
                         width: 65,
                         margin: EdgeInsets.only(left: 15.0, top: 10.0, right: 3.0),
                         decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(color:Color.fromARGB(255, 247, 234, 60) ),
                           color: pilihTanggal == index
                               ? Color.fromARGB(255, 247, 234, 60)
-                              : Colors.grey,
+                              : Colors.white,
                         ),
                         child: Column(
                           children: [
@@ -178,8 +179,8 @@ class _selectplaceState extends State<selectplace> {
                                     });
                                   },
                                   child: Container(
-                                    width: 50,
-                                    height: 25,
+                                    width: 90,
+                                    height: 45,
                                     margin: EdgeInsets.only(
                                       left: 20.0,
                                       top: 5.0,
