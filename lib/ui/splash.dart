@@ -20,6 +20,17 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Container(
+                  width:200,
+                  height: 200,
+
+                  decoration:const BoxDecoration(
+                  
+                    image: DecorationImage(
+                      image: AssetImage('assets/flutix.png'),
+                    fit: BoxFit.cover)
+                  ),
+                ),
                 Text(
                   "New Experience",
                   style: GoogleFonts.raleway(
@@ -28,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontSize: 20,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   "Watch a new movies much ",
                   style: GoogleFonts.raleway(
@@ -43,22 +54,22 @@ class _SplashScreenState extends State<SplashScreen> {
                     fontSize: 16,
                   ),
                 ),
-                SizedBox(height: 70),
+                const SizedBox(height: 70),
                 ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => SignUp(),
+                        builder: (context) => const SignUp(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 79, 62, 157),
+                    backgroundColor: const Color.fromARGB(255, 79, 62, 157),
                     foregroundColor: Colors.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(7.0),
                     ),
-                    minimumSize: Size(250, 50),
+                    minimumSize: const Size(250, 50),
                   ),
                   child: Text(
                     "Get Started",
@@ -68,7 +79,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +87,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     Text(
                       "Already Have Account?",
                       style: GoogleFonts.raleway(
-                        color: Color.fromARGB(255, 114, 113, 113),
+                        color: const Color.fromARGB(255, 114, 113, 113),
                         fontSize: 14,
                         fontWeight: FontWeight.w300,
                       ),
@@ -86,7 +97,7 @@ class _SplashScreenState extends State<SplashScreen> {
                         Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => SignIn()));
                       },
-                      child: Text(
+                      child: const Text(
                         "  Sign In",
                         style: TextStyle(
                           color: Color.fromARGB(255, 111, 11, 225),
