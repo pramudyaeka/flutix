@@ -81,7 +81,248 @@ class MyTickets extends StatelessWidget {
                 height: 79,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage("https://via.placeholder.com/81x79"),
+                    image: NetworkImage(
+                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigasi ke halaman detail saat gambar di-klik
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ticketdetail()),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(width: 10),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'The Avengers',
+                      style: GoogleFonts.raleway(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    Text(
+                      'Action - English',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                    Text(
+                      'XXI Big Mall Samarinda',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 81,
+                height: 79,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigasi ke halaman detail saat gambar di-klik
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ticketdetail()),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(width: 10),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'The Avengers',
+                      style: GoogleFonts.raleway(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    Text(
+                      'Action - English',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                    Text(
+                      'XXI Big Mall Samarinda',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 81,
+                height: 79,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigasi ke halaman detail saat gambar di-klik
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ticketdetail()),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(width: 10),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'The Avengers',
+                      style: GoogleFonts.raleway(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    Text(
+                      'Action - English',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                    Text(
+                      'XXI Big Mall Samarinda',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 81,
+                height: 79,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    // Navigasi ke halaman detail saat gambar di-klik
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ticketdetail()),
+                    );
+                  },
+                ),
+              ),
+              SizedBox(width: 10),
+              Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text(
+                      'The Avengers',
+                      style: GoogleFonts.raleway(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black),
+                    ),
+                    Text(
+                      'Action - English',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                    Text(
+                      'XXI Big Mall Samarinda',
+                      style: GoogleFonts.raleway(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w300,
+                          color: const Color.fromARGB(255, 160, 160, 160)),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                width: 81,
+                height: 79,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
                     fit: BoxFit.fill,
                   ),
                 ),
