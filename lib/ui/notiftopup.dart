@@ -182,6 +182,21 @@ class SuccessTopup extends StatelessWidget {
                   ),
                 ),
               ),
+              Positioned(
+                left: 0,
+                top: 113,
+                child: Container(
+                  width: 360,
+                  height: 178,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          "https://thumbs.dreamstime.com/b/%CF%83%CF%84%CE%BF%CE%B9%CF%87%CE%B5%CE%AF%CE%BF-%CF%83%CE%B7%CE%BC%CE%B1%CE%B4%CE%B9%CF%8E%CE%BD-%CE%BA%CF%81%CE%BF%CF%84%CF%8E%CE%BD%CF%89%CE%BD-%CF%80%CF%81%CE%AC%CF%83%CE%B9%CE%BD%CE%BF-checkmark-%CE%B5%CE%B9%CE%BA%CE%BF%CE%BD%CE%AF%CE%B4%CE%B9%CE%BF-%CF%80%CE%BF%CF%85-%CE%B1%CF%80%CE%BF%CE%BC%CE%BF%CE%BD%CF%8E%CE%BD%CE%B5%CF%84%CE%B1%CE%B9-137256202.jpg"),
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ),
               // Positioned(
               //   left: 127,
               //   top: 151,
