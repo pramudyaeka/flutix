@@ -375,7 +375,8 @@ class TicketDetails extends StatelessWidget {
                   height: 72,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/73x72"),
+                      image: NetworkImage(
+                          "data:image/png;base64,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"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -407,8 +408,8 @@ class TicketDetails extends StatelessWidget {
                   height: 178,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image:
-                          NetworkImage("https://via.placeholder.com/360x178"),
+                      image: NetworkImage(
+                          "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
                       fit: BoxFit.fill,
                     ),
                   ),
