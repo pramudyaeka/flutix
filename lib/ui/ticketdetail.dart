@@ -71,6 +71,23 @@ class TicketDetails extends StatelessWidget {
                 ),
               ),
               Positioned(
+                left: 190,
+                top: 61,
+                child: SizedBox(
+                  width: 72,
+                  child: Text(
+                    'Ticket',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontFamily: 'Raleway',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
                 left: 211,
                 top: 388,
                 child: Text(
@@ -384,12 +401,12 @@ class TicketDetails extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  left: 6,
-                  top: 10,
+                  left: 45,
+                  top: 113,
                   child: Center(
                     child: Container(
                       width: 360,
-                      height: 220,
+                      height: 178,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                           image: NetworkImage(
