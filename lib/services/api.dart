@@ -17,7 +17,7 @@ class Api {
     }
 
     final response =
-        await http.get(Uri.parse('$baseUrl/$endpoint?page=1&api_key=$apiKey'));
+        await http.get(Uri.parse('$baseUrl/$endpoint?page=2&api_key=$apiKey'));
 
     List<Movie> movies = [];
     if (response.statusCode == 200) {
