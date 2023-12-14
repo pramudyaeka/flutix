@@ -206,7 +206,7 @@ class MyWallet extends StatelessWidget {
                           width: 155,
                           height: 23,
                           child: Text(
-                            'Sunday 30, 15.oo',
+                            'Sunday 30, 15.00',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
@@ -271,7 +271,7 @@ class MyWallet extends StatelessWidget {
                                   width: 155,
                                   height: 23,
                                   child: Text(
-                                    'Sunday 30, 15.oo',
+                                    'Sunday 30, 15.00',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
                                       color: Colors.black,
@@ -330,7 +330,7 @@ class MyWallet extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: NetworkImage(
-                                          "https://via.placeholder.com/68x92"),
+                                          "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
                                       fit: BoxFit.fill,
                                     ),
                                   ),
@@ -351,7 +351,7 @@ class MyWallet extends StatelessWidget {
                                           width: 155,
                                           height: 23,
                                           child: Text(
-                                            'Sunday 30, 15.oo',
+                                            'Sunday 30, 15.00',
                                             textAlign: TextAlign.center,
                                             style: TextStyle(
                                               color: Colors.black,
@@ -410,7 +410,7 @@ class MyWallet extends StatelessWidget {
                                           decoration: BoxDecoration(
                                             image: DecorationImage(
                                               image: NetworkImage(
-                                                  "https://via.placeholder.com/68x92"),
+                                                  "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -433,7 +433,7 @@ class MyWallet extends StatelessWidget {
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: NetworkImage(
-                                  "https://via.placeholder.com/68x92"),
+                                  "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
                               fit: BoxFit.fill,
                             ),
                           ),
