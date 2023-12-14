@@ -52,7 +52,7 @@ class SuccessCheckout extends StatelessWidget {
                     minimumSize: Size(250, 50),
                   ),
                   child: Text(
-                    "My Tickets",
+                    "Back to home",
                     style: GoogleFonts.raleway(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
@@ -60,28 +60,7 @@ class SuccessCheckout extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 20),
-                Container(
-                    child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('Discover new movie ?',
-                        style: GoogleFonts.raleway(
-                            color: Color.fromARGB(255, 114, 114, 114),
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500)),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => HomePageUser()));
-                      },
-                      child: Text('Back to Home',
-                          style: GoogleFonts.raleway(
-                              color: Color.fromARGB(255, 79, 62, 157),
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500)),
-                    ),
-                  ],
-                ))
+                
               ],
             ),
           ),
