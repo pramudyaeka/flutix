@@ -73,7 +73,7 @@ class _checkoutScreen1State extends State<Checkout> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: 125,
+                      width: 105,
                       height: 200,
                       decoration: BoxDecoration(
                         color: Colors.black,
@@ -168,7 +168,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 110),
+                      const SizedBox(width: 100),
                       Text(
                         '32452009302031',
                         style: GoogleFonts.raleway(
@@ -192,7 +192,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 68),
+                      const SizedBox(width: 58),
                       Text(
                         'Smarinda Central Plaza',
                         style: GoogleFonts.raleway(
@@ -216,7 +216,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 80),
+                      const SizedBox(width: 70),
                       Text(
                         'Monday 18, 22.00',
                         style: GoogleFonts.raleway(
@@ -240,7 +240,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 250),
+                      const SizedBox(width: 240),
                       Text(
                         'A1, A2',
                         style: GoogleFonts.raleway(
@@ -264,7 +264,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 145),
+                      const SizedBox(width: 135),
                       Text(
                         'Rp. 50.000 x 2',
                         style: GoogleFonts.raleway(
@@ -288,7 +288,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 215),
+                      const SizedBox(width: 205),
                       Text(
                         'Rp. 50.000',
                         style: GoogleFonts.raleway(
@@ -312,7 +312,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 207),
+                      const SizedBox(width: 197),
                       Text(
                         'Rp. 120.000',
                         style: GoogleFonts.raleway(
@@ -343,7 +343,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      const SizedBox(width: 86),
+                      const SizedBox(width: 66),
                       Text(
                         'Rp. 250.000',
                         style: GoogleFonts.raleway(
@@ -367,7 +367,7 @@ class _checkoutScreen1State extends State<Checkout> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                      const SizedBox(width: 60),
+                      const SizedBox(width: 40),
                       IconButton(
                           onPressed: () {
                             Navigator.of(context).push(MaterialPageRoute(

@@ -81,8 +81,7 @@ class MyTickets extends StatelessWidget {
                 height: 79,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(
-                        "https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810"),
+                    image: NetworkImage("https://via.placeholder.com/81x79"),
                     fit: BoxFit.fill,
                   ),
                 ),
