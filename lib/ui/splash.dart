@@ -21,15 +21,12 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  width:200,
+                  width: 200,
                   height: 200,
-
-                  decoration:const BoxDecoration(
-                  
-                    image: DecorationImage(
-                      image: AssetImage('assets/flutix.png'),
-                    fit: BoxFit.cover)
-                  ),
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/flutix.png'),
+                          fit: BoxFit.cover)),
                 ),
                 Text(
                   "New Experience",

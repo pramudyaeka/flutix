@@ -6,8 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class selectseat extends StatefulWidget {
-  
-    Movie movies;
+  Movie movies;
 
   selectseat({super.key, required this.movies});
 
@@ -36,7 +35,8 @@ class _selectseatState extends State<selectseat> {
         margin: EdgeInsets.symmetric(horizontal: 8, vertical: 6),
         decoration: BoxDecoration(
           color: seatStatus[row][col] ? kSeatSelectedColor : Colors.white,
-          border: Border.all(color: Color.fromARGB(255, 247, 234, 60), width: 1),
+          border:
+              Border.all(color: Color.fromARGB(255, 247, 234, 60), width: 1),
           borderRadius: BorderRadius.circular(4),
         ),
         child: Align(
@@ -47,7 +47,7 @@ class _selectseatState extends State<selectseat> {
     );
   }
 
-    List<Widget> buildSeatRow(String rowName, int row) {
+  List<Widget> buildSeatRow(String rowName, int row) {
     List<Widget> rowWidgets = List.generate(6, (col) {
       final seatText = "$rowName${6 - col}";
       return buildSeatContainer(seatText, row, col);
@@ -96,114 +96,116 @@ class _selectseatState extends State<selectseat> {
               ),
             ),
             Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-              8,
-              (index) => Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: buildSeatRow(
-                  String.fromCharCode('H'.codeUnitAt(0) - index),
-                  index,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(
+                8,
+                (index) => Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: buildSeatRow(
+                    String.fromCharCode('H'.codeUnitAt(0) - index),
+                    index,
+                  ),
                 ),
               ),
             ),
-          ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Row(
-            children: [
-              Row(
-                children: [
-                  Container(
-                    width: 20,
-                    height: 20,
-                    margin: EdgeInsets.only(left: 50, right: 10, top: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(4),
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 20,
+                      height: 20,
+                      margin: EdgeInsets.only(left: 50, right: 10, top: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(4),
+                        color: Color.fromARGB(255, 111, 11, 225),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Text(
+                        "Booked",
+                        style: GoogleFonts.raleway(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 20,
+                      height: 20,
+                      margin: EdgeInsets.only(left: 10, right: 10, top: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(color: Colors.grey, width: 1),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 10),
+                      child: Text(
+                        "Available",
+                        style: GoogleFonts.raleway(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Container(
+                      width: 20,
+                      height: 20,
+                      margin: EdgeInsets.only(left: 10, top: 10),
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 247, 234, 60),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 10, left: 10),
+                      child: Text(
+                        "Selected",
+                        style: GoogleFonts.raleway(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, left: 20, bottom: 40),
+                  child: Text(
+                    "Confirm Your Book",
+                    style: GoogleFonts.raleway(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => Checkout(movies: widget.movies)));
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 100, top: 40, bottom: 40, right: 10),
+                    child: Icon(
+                      Icons.arrow_circle_right_outlined,
                       color: Color.fromARGB(255, 111, 11, 225),
+                      size: 40,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 10),
-                    child: Text(
-                      "Booked",
-                      style: GoogleFonts.raleway(fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    width: 20,
-                    height: 20,
-                    margin: EdgeInsets.only(left: 10, right: 10, top: 10),
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.grey, width: 1),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 10),
-                    child: Text(
-                      "Available",
-                      style: GoogleFonts.raleway(fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Container(
-                    width: 20,
-                    height: 20,
-                    margin: EdgeInsets.only(left: 10, top: 10),
-                    decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 247, 234, 60),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(top: 10, left: 10),
-                    child: Text(
-                      "Selected",
-                      style: GoogleFonts.raleway(fontSize: 12),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 40, left: 20, bottom: 40),
-                child: Text(
-                  "Confirm Your Book",
-                  style: GoogleFonts.raleway(
-                    color: Colors.black,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 20,
                   ),
                 ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => Checkout(movies: widget.movies)));
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 100, top: 40, bottom: 40, right: 10),
-                  child: Icon(
-                    Icons.arrow_circle_right_outlined,
-                    color: Color.fromARGB(255, 111, 11, 225),
-                    size: 40,
-                  ),
-                ),
-              ),
-            ],
-          ),
+              ],
+            ),
           ],
         ),
       ]),
